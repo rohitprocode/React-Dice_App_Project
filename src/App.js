@@ -7,6 +7,7 @@ import { useState } from "react";
 const App = () => {
   const [gameStarted, setGameStarted] = useState(false); //useStateHook
   const [selectedNumber,setSelectedNumber] = useState();
+  const [dice,setDice] = useState(1);
 
   const numbers = [1, 2, 3, 4, 5, 6];
 
@@ -20,6 +21,7 @@ const App = () => {
 
   const generateRandomNo = () =>{
     const generatedNo = Math.ceil(Math.random() * 6);
+    setDice(generatedNo);
     console.log(generatedNo);
   }
 
@@ -50,8 +52,8 @@ const App = () => {
           )
           }
         </Flex>
-        <Box>
-          <Image onClick={generateRandomNo} src="\dice\dice1.png"/>
+        <Box onClick={generateRandomNo} >
+          <Image src={`/dice/dice${dice}.png`}/>
         </Box>
         <Text as="p" fontSize="xl">Click on Dice to Roll</Text>
 
