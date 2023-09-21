@@ -1,7 +1,7 @@
-import "./app.css"
+import {Box} from "@chakra-ui/layout"
 
 const App = () =>{
-  return <div className="main">This is my first import</div>;
+  return <Box color="Red" backgroundColor="blue" > This is Box</Box>
 }
 
 export default App;
