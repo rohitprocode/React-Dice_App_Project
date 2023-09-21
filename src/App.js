@@ -15,9 +15,13 @@ const App = () => {
   return <>
     {gameStarted ?
     <> 
-      <Stack>
-        <Heading>Select Number</Heading>
-        <Flex>
+      <Stack 
+      justify={"center"}
+      align={"center"} 
+      height={"100vh"} 
+      >
+        <Heading as="h1" fontSize={"6xl"} mb="16">Select Number</Heading>
+        <Flex pb="10">
           {numbers.map((value) =>
             <Flex justify={"center"}
               align={"center"}
@@ -36,19 +40,19 @@ const App = () => {
         <Box>
           <Image src="\dice\dice1.png"/>
         </Box>
-        <Text as="p" fontSize="20">Click on Dice to Roll</Text>
+        <Text as="p" fontSize="xl">Click on Dice to Roll</Text>
 
-        <Text>0</Text>
-        <Text>Total Score</Text>
+        <Text fontSize={"8xl"} fontWeight={"bold"} >0</Text>
+        <Text fontSize={"6xl"}>Total Score</Text>
         <Button>Reset Score</Button>
       </Stack>
-      <Stack>
+      <Stack maxW={"900px"} margin={"auto"}>
         <Heading as="h2">Game Rules:</Heading>
         <List>
           <ListItem>Select Any Number</ListItem>
-          <ListItem>Select Any Number</ListItem>
-          <ListItem>Select Any Number</ListItem>
-          <ListItem>Select Any Number</ListItem>
+          <ListItem>Click on dice image to roll it.</ListItem>
+          <ListItem>Select number is equal to obtained dice result then you will get same point of dice</ListItem>
+          <ListItem>If you are wrong score will be deducted by two points</ListItem>
         </List>
       </Stack>
       </>
