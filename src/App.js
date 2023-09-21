@@ -3,11 +3,12 @@ import { Image } from "@chakra-ui/image";
 import { Button } from "@chakra-ui/button";
 
 const App = () =>{
-  return (<Flex>
-    <Image src="/dices.png"/>
+  return (
+  <Flex justify="center" align="center" >
+    <Image width="50%" src="/dices.png"/>
     <Stack>
-      <Heading as="h1">The Dice Game</Heading>
-      <Button>Play Now</Button>      
+      <Heading fontSize="7xl" as="h1">The Dice Game</Heading>
+      <Button alignSelf="flex-end" >Play Now</Button>      
     </Stack>
   </Flex>
   );
