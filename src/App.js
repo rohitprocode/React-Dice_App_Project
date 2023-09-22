@@ -16,6 +16,9 @@ const App = () => {
     setGameStarted(true);
   }
 
+  const backGameHandler = () =>{
+    setGameStarted(false);
+  }
   const onNumberClicked = (value) => {
     setSelectedNumber(value);
     setError(null)
@@ -38,6 +41,7 @@ const App = () => {
   return <>
     {gameStarted ?
       <>
+      <Button onClick={backGameHandler}>Back</Button>
         <Stack
           justify={"center"}
           align={"center"}
@@ -61,6 +65,9 @@ const App = () => {
                 onClick={() => { onNumberClicked(value) }}
               >{value}
               </Flex>
+              
+              
+              
             )
             }
           </Flex>
