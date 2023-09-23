@@ -41,15 +41,25 @@ const App = () => {
   return <>
     {gameStarted ?
       <>
-      <Button onClick={backGameHandler}>Back</Button>
+        <Button 
+      float={"right"}
+      right={"50px"}
+      top={"50px"}
+      onClick={backGameHandler}>
+        Back</Button>
         <Stack
           justify={"center"}
           align={"center"}
           height={"100vh"}
+          maxWidth={"100vh"}
+          // margin={"auto"}
+          margin={"auto 55vh auto auto"}
         >
           <Heading as="h1" fontSize={"6xl"} mb="10" color={error ? "red" : "black"}>
             {(error) ? error : "Select Number"}
+            
           </Heading>
+          
           <Flex pb="10">
             {numbers.map((value) =>
               <Flex justify={"center"}
@@ -65,9 +75,6 @@ const App = () => {
                 onClick={() => { onNumberClicked(value) }}
               >{value}
               </Flex>
-              
-              
-              
             )
             }
           </Flex>
