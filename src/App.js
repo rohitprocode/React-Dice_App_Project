@@ -39,7 +39,7 @@ const App = () => {
   }
 
   return <>
-    {gameStarted ?
+    {gameStarted  ?
       <>
         <Button 
       float={"right"}
